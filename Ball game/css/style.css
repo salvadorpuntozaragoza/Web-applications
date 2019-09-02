@@ -1,0 +1,12 @@
+
+body{
+	width: 100vw;
+	height: 100vh;
+	border: solid 1px blue;
+	background-color: black;
+}
+
+#myCanvas{
+	border: solid 1px orange;
+	background-color: white;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crear publicacion</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="plugins/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<div class="row justify-content-around" style="background-color: black">
+		<h4 onclick="openWindow('index.html')">Health share</h4>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col">
+
+				<form action="index.html" class="was-validated">
+					
+					<div class="form-group">
+						<label for="nombreID">Nombre de la organizacion medica</label>
+						<input type="text" class="form-control" id="nombreID" placeholder="Nombre" required>
+						<div class="valid-feedback">Este nombre sera publicado en la pagina principal.</div>
+						<div class="invalid-feedback">Este campo es obligatorio</div>
+					</div>
+
+					<div class="form-group">
+						<label for="estadoID">Estado:</label>
+						<input type="text" class="form-control" id="estadoID" placeholder="Estado" required>
+						<div class="valid-feedback">El este estado se encuentra tu organizacion</div>						
+						<div class="invalid-feedback">Este campo es obligatorio</div>
+					</div>
+
+					<div class="form-group">
+						<label for="ciudadID">Ciudad:</label>
+						<input type="text" class="form-control" id="ciudadID" placeholder="Ciudad" required>
+						<div class="valid-feedback">En esta ciudad se encuentra tu organizacion.</div>						
+						<div class="invalid-feedback">Este campo es obligatorio</div>
+					</div>
+
+					<div class="form-group">
+						<label for="contactoID">Contacto:</label>
+						<input type="text" class="form-control" id="contactoID" placeholder="Puede ser numero telefonico o correo electronico" required>
+						<div class="valid-feedback">Los grupos medicos te contactaran por este medio</div>						
+						<div class="invalid-feedback">Este campo es obligatorio</div>
+					</div>
+
+					<div class="form-group">
+						<label for="shortDesc">Resumen de tu idea:</label>
+						<textarea type="text" cols="10" rows="2" class="form-control" id="shortDesc" placeholder="Escribe una pequeña descripcion de tu idea" required></textarea>
+						<div class="valid-feedback">Asegurate de que sea una descripcion sencilla y facil de entender</div>						
+						<div class="invalid-feedback">Este campo es obligatorio</div>
+					</div>
+
+					<div class="form-group">
+						<label for="longDesc">Idea detallada:</label>
+						<textarea type="text" cols="10" rows="8" class="form-control" id="longDesc" placeholder="Escribe una descripcion detallada de tu idea" required></textarea>
+						<div class="valid-feedback">Da la mayor cantidad de detalles que puedas</div>						
+						<div class="invalid-feedback">Este campo es obligatorio</div>
+					</div>
+
+					<div class="form-group form-check">
+						<label class="form-check-label">
+						<input class="form-check-input" type="checkbox" name="remember" id="lblCheck" required> Acepto que los datos introducidos puedan ser publicados.
+						<div class="valid-feedback">Recuerda llenar todos los campos anteriores.</div>
+						<div class="invalid-feedback">Marca esta casilla para continuar</div>
+						</label>
+					</div>
+
+					<button type="button" class="btn btn-dark" onclick="enviarDatos()">Crear</button>
+				</form>
+
+				
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-firestore.js"></script>
+
+	<script type="text/javascript" src="js/publicacion.js"></script>
+</body>
+</html>

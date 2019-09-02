@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../plugins/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<div class="row justify-content-around" style="background-color: black">
+		<h4>Food friend</h4>
+	</div>
+
+	<div class="container" style="margin-top: 15px">
+		<div class="row justify-content-center">
+			<div class="col-3 color-carmin">
+				<form>
+					<div class="form-group">
+						<label for="usuarioID">Usuario</label>
+						<input type="text" class="form-control" id="usuarioID" placeholder="Correo o usuario">
+					</div>
+
+				  	<div class="form-group">
+				    	<label for="contraID">Password</label>
+				    	<input type="password" class="form-control" id="contraID" placeholder="Contraseña">
+				  	</div>
+
+				</form>
+
+				<div class="row justify-content-center">
+				  	<button class="btn btn-primary" onclick="iniciarSesion()" style="margin: 10px">Iniciar</button>
+				  	<button class="btn btn-primary" onclick="openWindow()" style="margin: 10px">Registrarse</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-firestore.js"></script>
+
+    <script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/loginJs.js"></script>
+
+</body>
+</html>

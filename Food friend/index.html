@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Food friend</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="plugins/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<!-- Header -->
+	<div class="row justify-content-around" style="background-color: black">
+		<h4>Food friend</h4>
+		<h4 id="logedID">Loged in as: </h4>
+
+		<div class="row">
+			<input class = "form-rounded" type="text" id="idBuscar" placeholder="Buscar...">
+			<button class="btn btn-secondary btnAdd" id="btnBuscar" onclick="filtrar()">Buscar</button>
+		</div>
+		<button class="btn btn-primary btnAdd" data-toggle="modal" data-target="#myModalPublications">Crear nuevo</button>
+		<button class="btn-sm" onclick="logOff()"><img style="max-width: 20px;max-height: 20px" src="img/off.png"></button>
+	</div>
+
+	<!-- Contenedor de publicaciones -->
+	<div class="container" style="margin-right: 20px;margin-left: 20px;max-width:100vw" >
+
+		<div class="row">
+			<div class="col-3" id="sideBar">
+				
+			</div>
+
+			<div class="col-9">
+				<div class="row justify-content-center" id="publicaciones">
+			
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+
+	<!-- Info modal -->
+	<div class="container">
+	  <!-- The Modal -->
+	  <div class="modal fade" id="myModal">
+	    <div class="modal-dialog modal-dialog-centered">
+	      <div class="modal-content" id="modal">
+	      
+	        <!-- Modal Header -->
+	        <div class="modal-header">
+	          <h3 class="modal-title" id="modalTitleID"></h3>
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        </div>
+	        
+	        <!-- Modal body -->
+	        <div class="modal-body" id="modalBodyID">
+	          
+	        </div>
+	        
+	        <!-- Modal footer -->
+	        <div class="modal-footer" id="modalFooterID" style="overflow-y: auto">
+
+	        	<div class="col">
+	        		<div class="row">
+	        			<h5>Chat:</h5>
+		        	</div>
+
+		        	<div class="col" id="comentsID">
+		        		
+		        	</div>
+
+		        	<input type = "text" placeholder = "Envia un mensaje" id="mensajeID">
+		        	<button type="button" class=" btn btn-secondary" onclick="saveComment()">Send</button>
+		        	<button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeModal()">Close</button>
+	        	</div>
+	        </div>
+	        
+	      </div>
+	    </div>
+	  </div>
+
+	  <!-- Publicacion modal -->
+	  <div class="container">
+	  <!-- The Modal -->
+	  <div class="modal fade" id="myModalPublications">
+	    <div class="modal-dialog modal-dialog-centered">
+	      <div class="modal-content" id="modal">
+	      
+	        <!-- Modal Header -->
+	        <div class="modal-header">
+	          <h3 class="modal-title" id="modalTitleID"></h3>
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        </div>
+	        
+	        <!-- Modal body -->
+	        <div class="modal-body" id="modalBodyID">
+	        	<form>
+					<div class="form-group">
+						<label for="lugarID">Lugar</label>
+						<input type="text" class="form-control" id="lugarID" placeholder="Lugar de comida">
+					</div>
+
+				  	<div class="form-group">
+				    	<label for="descID">Deal</label>
+				    	<textarea type="text" class="form-control" id="descID" placeholder="Describe el deal"></textarea>
+				  	</div>
+				</form>
+	        </div>
+	        
+	        <!-- Modal footer -->
+	        <div class="modal-footer" id="modalFooterID">
+	        	<button type="button" class="btn btn-secondary" onclick="guardar()">Publicar</button>
+	         	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        </div>
+	        
+	      </div>
+	    </div>
+	  </div>
+</div>
+
+	<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-firestore.js"></script>
+
+    <script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

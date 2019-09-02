@@ -1,0 +1,53 @@
+.cards:hover{
+	opacity: 2;
+	text-underline-position: under; 
+}
+
+h4{
+	color: white;
+	padding: 5px;
+	margin: 0px;
+}
+
+h4:hover{
+	cursor: pointer;
+}
+
+.pres{
+	background-color: #303030;
+	color: white;
+}
+
+.lay-margin{
+	margin-top: 20px;
+}
+
+.btn-primary {
+  font-family: Raleway-SemiBold;
+  font-size: 13px;
+  color: #FFF;
+  letter-spacing: 1px;
+  line-height: 15px;
+  border: 2px solid rgba(58, 133, 191, 0.75);
+  border-radius: 40px;
+  background: rgba(58, 133, 191, 0.75);
+  transition: all 0.3s ease 0s;
+}
+
+.btn-primary:hover {
+  color: #FFF;
+  background: rgba(58, 133, 191, 0.75);
+  border: 2px solid rgba(58, 133, 191, 0.75);
+}
+
+.btn-dark:hover{
+	background-color: green;
+}
+
+body{
+	background-color: #E0F1F1;
+}
+
+.btnAdd{
+	margin: 10px;
+}
